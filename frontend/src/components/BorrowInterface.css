@@ -1,0 +1,474 @@
+.borrow-interface {
+  background-color: #1a1d1f;
+  border-radius: 16px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 30px;
+  color: #ffffff;
+  border: 1px solid rgba(0, 180, 255, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-right {
+  text-align: right;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  color: #00B4FF;
+  font-weight: 600;
+}
+
+.title::before {
+  content: "Ł";
+  background: linear-gradient(135deg, #00B4FF, #0090cc);
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 180, 255, 0.3);
+}
+
+.market-price {
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  padding: 0 10px;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.tab {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #888;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.tab:hover {
+  color: #00B4FF;
+}
+
+.tab.active {
+  color: #00B4FF;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #00B4FF;
+}
+
+.tab svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* External links styling */
+a.tab {
+  color: #888;
+  position: relative;
+  padding-right: 32px;
+}
+
+a.tab:hover {
+  color: #00B4FF;
+}
+
+a.tab::after {
+  content: '↗';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+a.tab:hover::after {
+  opacity: 1;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.overview {
+  background: rgba(30, 33, 35, 0.95);
+  border-radius: 12px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.overview h2 {
+  color: #00B4FF;
+  margin-bottom: 25px;
+  font-size: 18px;
+  padding: 20px 20px 0 20px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  padding: 0 20px 20px 20px;
+}
+
+.metric {
+  background: rgba(44, 47, 49, 0.4);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.metric:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 180, 255, 0.2);
+}
+
+.metric label {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.value {
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.value .unit {
+  color: #00B4FF;
+  margin-left: 6px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.configure {
+  background: rgba(30, 33, 35, 0.95);
+  padding: 25px;
+  border-radius: 12px;
+  height: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.configure h2 {
+  color: #00B4FF;
+  margin-bottom: 25px;
+  font-size: 18px;
+  padding: 0;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.input-with-max {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  background: rgba(44, 47, 49, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 14px;
+  border-radius: 12px;
+  width: 100%;
+  font-size: 15px;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00B4FF;
+}
+
+.max-button {
+  background: #2C2F31;
+  border: 1px solid #00B4FF;
+  color: #00B4FF;
+  padding: 0 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.max-button:hover {
+  background: #00B4FF;
+  color: #1E2123;
+}
+
+.action-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #00B4FF, #0090cc);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:hover {
+  background: linear-gradient(135deg, #33C5FF, #00a3e6);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 180, 255, 0.3);
+}
+
+.action-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.wallet-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.wallet-button {
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wallet-button.connect, .wallet-button.mint-tokens {
+  background: linear-gradient(135deg, #00B4FF, #0090cc);
+  color: #ffffff;
+  border: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.wallet-button.connect:hover, .wallet-button.mint-tokens:hover {
+  background: linear-gradient(135deg, #33C5FF, #00a3e6);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 180, 255, 0.3);
+}
+
+.wallet-button.disconnect {
+  background: transparent;
+  color: #00B4FF;
+  border: 1px solid #00B4FF;
+}
+
+.wallet-button.disconnect:hover {
+  background: rgba(0, 180, 255, 0.1);
+}
+
+.wallet-button.mint-tokens {
+  background-color: #00B4FF;
+  margin-left: 10px;
+}
+
+.wallet-button.mint-tokens:hover {
+  background-color: #33C5FF;
+}
+
+.wallet-button.mint-tokens:disabled {
+  background-color: #666666;
+  cursor: not-allowed;
+}
+
+.wallet-address {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.approval-status {
+  text-align: center;
+  margin: 15px 0;
+  padding: 10px;
+}
+
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: rgba(30, 33, 35, 0.95);
+}
+
+.status-indicator.approved {
+  background-color: rgba(39, 174, 96, 0.1);
+  color: #27AE60;
+  border: 1px solid #27AE60;
+}
+
+.status-indicator.not-approved {
+  background-color: rgba(0, 180, 255, 0.1);
+  color: #00B4FF;
+  border: 1px solid #00B4FF;
+}
+
+.error-message {
+  background: rgba(255, 59, 48, 0.15);
+  color: #ff3b30;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 59, 48, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.info-icon {
+  margin-left: 5px;
+  color: #666;
+  cursor: help;
+}
+
+.usd-value {
+  color: #666;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.deposit-doge, .custom-spending-cap {
+  color: white;
+}
+
+.transaction-status {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.transaction-pending {
+  background-color: rgba(255, 165, 0, 0.1);
+  color: #ffffff;
+  border: 1px solid #ffa500;
+}
+
+.transaction-success {
+  background-color: rgba(0, 255, 0, 0.1);
+  color: #ffffff;
+  border: 1px solid #00ff00;
+}
+
+.transaction-error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ffffff;
+  border: 1px solid #ff0000;
+}
+
+button {
+  background-color: #00B4FF;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #33C5FF;
+}
+
+button:disabled {
+  background-color: #666666;
+  cursor: not-allowed;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.connected-status {
+  text-align: center;
+  color: #ffffff;
+  padding: 16px;
+  background-color: #242424;
+  border-radius: 8px;
+}
+
+.connected-address {
+  color: #ffffff;
+  font-family: monospace;
+}
+
+.loading {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.wallet-status {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
