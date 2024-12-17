@@ -19,7 +19,7 @@ First, ensure your repository is properly initialized and configured:
 git init
 
 # Add the remote repository
-git remote add origin https://github.com/litemaker-labs/litemaker-dapp.git
+git remote add origin https://github.com/jd316/makerwltc-v1.3.git
 
 # Create and switch to main branch if not already on it
 git checkout -b main
@@ -38,7 +38,7 @@ git push -u origin main
 
 1. Go to [Vercel Dashboard](https://vercel.com/dashboard)
 2. Click "New Project"
-3. Import your LiteMaker repository (`litemaker-labs/litemaker-dapp`)
+3. Import your LiteMaker repository (`jd316/makerwltc-v1.3`)
 4. Select the "frontend" directory as the root directory
 
 ### 3. Configure Environment Variables

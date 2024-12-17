@@ -14,8 +14,8 @@ A simplified MakerDAO-style protocol for Litecoin, allowing users to borrow USDm
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/litemaker-labs/litemaker-dapp.git
-cd litemaker-dapp
+git clone https://github.com/jd316/makerwltc-v1.3.git
+cd makerwltc-v1.3
 ```
 
 2. Install dependencies:
@@ -89,6 +89,6 @@ MIT License - see LICENSE file for details
 
 ## Contact
 
-- GitHub: [@litemaker-labs](https://github.com/litemaker-labs)
-- Project Link: [https://github.com/litemaker-labs/litemaker-dapp](https://github.com/litemaker-labs/litemaker-dapp)
+- GitHub: [@jd316](https://github.com/jd316)
+- Project Link: [https://github.com/jd316/makerwltc-v1.3](https://github.com/jd316/makerwltc-v1.3)
 - Discord: [Join our community](https://discord.gg/litemaker)
